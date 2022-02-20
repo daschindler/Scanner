@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Data Scanner</string>
+    <string name="take_picture">Take picture</string>
+    <string name="exposure_time_description">%1$d ms</string>
+    <string name="default_exposure_time_string">1/8000</string>
+    <string name="default_iso_string">100</string>
+    <string name="hyphen">-</string>
+    <string name="data_received">Data received:</string>
+</resources>

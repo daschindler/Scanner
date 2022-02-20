@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="slider_values">
+        <item>0.000125</item>
+        <item>0.0002</item>
+        <item>0.00025</item>
+        <item>0.0005</item>
+        <item>0.001</item>
+    </array>
+</resources>

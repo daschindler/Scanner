@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_messages"
+        tools:listitem="@layout/card_cell"/>
+
+    <!--<ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_messages"/>-->
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:text="No messages received until now..."
+        android:textAlignment="center"
+        android:id="@+id/tv_no_messages_received"
+        android:visibility="gone"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_scan"
+        android:layout_width="40pt"
+        android:layout_height="40pt"
+        app:fabCustomSize="40pt"
+        app:maxImageSize="20pt"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_baseline_linked_camera_24"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Scan an LED" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

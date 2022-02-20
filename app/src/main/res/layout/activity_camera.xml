@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="at.davidschindler.scanner.CameraActivity">
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_data_received"
+        android:layout_alignParentTop="true"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/tv_data_received"
+        android:id="@+id/imageview"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/data_received"
+        android:id="@+id/tv_data_received"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/tv_display_data"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hyphen"
+        android:paddingTop="16dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/ll_sliders"
+        android:id="@+id/tv_display_data"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_sliders"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16pt"
+        android:paddingBottom="16pt"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="48pt"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="6pt"
+                android:text="@string/default_iso_string"
+                android:id="@+id/tv_display_current_iso"/>
+
+            <com.sdsmdg.harjot.crollerTest.Croller
+                android:id="@+id/crollerIso"
+                android:layout_width="wrap_content"
+                android:layout_height="48pt"
+                app:back_circle_color="#EDEDED"
+                app:indicator_color="#0B3C49"
+                app:indicator_width="10"
+                app:is_continuous="true"
+                app:label="ISO"
+                app:label_color="#ffffff"
+                app:label_size="25"
+                app:main_circle_color="#FFFFFF"
+                app:max="3200"
+                app:min="100"
+                app:progress_primary_color="#0B3C49"
+                app:progress_secondary_color="#EEEEEE" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48pt"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="5pt"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/btn_takepicture"
+            android:layout_width="wrap_content"
+            android:layout_height="48pt"
+            android:src="@drawable/shutter"
+            android:text="@string/take_picture" /></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48pt"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="6pt"
+            android:text="@string/default_exposure_time_string"
+            android:id="@+id/tv_display_current_exposure"/>
+
+        <com.sdsmdg.harjot.crollerTest.Croller
+            android:id="@+id/crollerExposure"
+            android:layout_width="wrap_content"
+            android:layout_height="48pt"
+            app:back_circle_color="#EDEDED"
+            app:indicator_color="#0B3C49"
+            app:indicator_width="10"
+            app:is_continuous="true"
+            app:label_color="#ffffff"
+            app:label_size="25"
+            app:main_circle_color="#FFFFFF"
+            app:max="1000000"
+            app:label="Exposure"
+            app:min="125000"
+            app:progress_primary_color="#0B3C49"
+            app:progress_secondary_color="#EEEEEE" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
